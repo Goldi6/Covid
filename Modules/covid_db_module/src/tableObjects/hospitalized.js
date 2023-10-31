@@ -1,0 +1,105 @@
+//HOSPITALIZED
+const resource_id = "e4bf0ab8-ec88-4f9b-8669-f2cc78273edd";
+
+const tableName = "tblHospitalized";
+
+const fields = [
+  { id: "Id", type: "int primary key " },
+  { id: "Date", type: "datetime", descIndex: true },
+  { id: "Hospitalized", type: "int" },
+  { id: "PercentageWomenHospitalized", type: "float" },
+  { id: "AverageAgeHospitalized", type: "float" },
+  { id: "StandardDeviationAgeHospitalized", type: "float" },
+  { id: "Ventilated", type: "int" },
+  { id: "PercentageWomenVentilated", type: "float" },
+  { id: "AverageAgeVentilated", type: "float" },
+  { id: "StandardDeviationAgeVentilated", type: "float" },
+  { id: "PercentageUnvaccinatedVentilated", type: "float" },
+  { id: "MildCases", type: "int" },
+  { id: "PercentageWomenMildCases", type: "float" },
+  { id: "PercentageUnvaccinatedMildCases", type: "float" },
+  { id: "AverageAgeMildCases", type: "float" },
+  { id: "StandardDeviationAgeMildCases", type: "float" },
+  { id: "ModerateCases", type: "int" },
+  { id: "PercentageWomenModerateCases", type: "float" },
+  { id: "PercentageUnvaccinatedModerateCases", type: "float" },
+  { id: "AverageAgeModerateCases", type: "float" },
+  { id: "StandardDeviationAgeModerateCases", type: "float" },
+  { id: "SevereCases", type: "int" },
+  { id: "PercentageWomenSevereCases", type: "float" },
+  { id: "PercentageUnvaccinatedSevereCases", type: "float" },
+  { id: "AverageAgeSevereCases", type: "float" },
+  { id: "StandardDeviationAgeSevereCases", type: "float" },
+  { id: "CumulativeSevereCases", type: "int" },
+];
+//HOSPITALIZED
+
+const translationMap = {
+  _id: "Id",
+  תאריך: "Date",
+  מאושפזים: "Hospitalized",
+  "אחוז נשים מאושפזות": "PercentageWomenHospitalized",
+  "גיל ממוצע מאושפזים": "AverageAgeHospitalized",
+  "סטיית תקן גיל מאושפזים": "StandardDeviationAgeHospitalized",
+  מונשמים: "Ventilated",
+  "אחוז נשים מונשמות": "PercentageWomenVentilated",
+  "גיל ממוצע מונשמים": "AverageAgeVentilated",
+  "סטיית תקן גיל מונשמים": "StandardDeviationAgeVentilated",
+  "אחוז מונשמים לא מחוסנים": "PercentageUnvaccinatedVentilated",
+  "חולים קל": "MildCases",
+  "אחוז נשים חולות קל": "PercentageWomenMildCases",
+  "אחוז חולים קל לא מחוסנים": "PercentageUnvaccinatedMildCases",
+  "גיל ממוצע חולים קל": "AverageAgeMildCases",
+  "סטיית תקן גיל חולים קל": "StandardDeviationAgeMildCases",
+  "חולים בינוני": "ModerateCases",
+  "אחוז נשים חולות בינוני": "PercentageWomenModerateCases",
+  "אחוז חולים בינוני לא מחוסנים": "PercentageUnvaccinatedModerateCases",
+  "גיל ממוצע חולים בינוני": "AverageAgeModerateCases",
+  "סטיית תקן גיל חולים בינוני": "StandardDeviationAgeModerateCases",
+  "חולים קשה": "SevereCases",
+  "אחוז נשים חולות קשה": "PercentageWomenSevereCases",
+  "אחוז חולים קשה לא מחוסנים": "PercentageUnvaccinatedSevereCases",
+  "גיל ממוצע חולים קשה": "AverageAgeSevereCases",
+  "סטיית תקן גיל חולים קשה": "StandardDeviationAgeSevereCases",
+  "חולים קשה מצטבר": "CumulativeSevereCases",
+};
+
+////////////////////////////////////////
+//HOSPITALIZED
+
+const original_translatedFields = [
+  { id: "_id", type: "int primary key identity(1,1)" },
+  { id: "תאריך", type: "date" },
+  { id: "מאושפזים", type: "int" },
+  { id: "אחוז נשים מאושפזות", type: "float" },
+  { id: "גיל ממוצע מאושפזים", type: "float" },
+  { id: "סטיית תקן גיל מאושפזים", type: "float" },
+  { id: "מונשמים", type: "int" },
+  { id: "אחוז נשים מונשמות", type: "float" },
+  { id: "גיל ממוצע מונשמים", type: "float" },
+  { id: "סטיית תקן גיל מונשמים", type: "float" },
+  { id: "אחוז מונשמים לא מחוסנים", type: "float" },
+  { id: "חולים קל", type: "int" },
+  { id: "אחוז נשים חולות קל", type: "float" },
+  { id: "אחוז חולים קל לא מחוסנים", type: "float" },
+  { id: "גיל ממוצע חולים קל", type: "float" },
+  { id: "סטיית תקן גיל חולים קל", type: "float" },
+  { id: "חולים בינוני", type: "int" },
+  { id: "אחוז נשים חולות בינוני", type: "float" },
+  { id: "אחוז חולים בינוני לא מחוסנים", type: "float" },
+  { id: "גיל ממוצע חולים בינוני", type: "float" },
+  { id: "סטיית תקן גיל חולים בינוני", type: "float" },
+  { id: "חולים קשה", type: "int" },
+  { id: "אחוז נשים חולות קשה", type: "float" },
+  { id: "אחוז חולים קשה לא מחוסנים", type: "float" },
+  { id: "גיל ממוצע חולים קשה", type: "float" },
+  { id: "סטיית תקן גיל חולים קשה", type: "float" },
+  { id: "חולים קשה מצטבר", type: "int" },
+];
+
+module.exports = {
+  fields,
+ translationMap,
+  tableName,
+  resource_id,
+};

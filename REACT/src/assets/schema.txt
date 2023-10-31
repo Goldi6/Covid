@@ -1,0 +1,62 @@
+$break-point:769px;
+
+//COLORS
+$font-color:#222b45;
+$nav-font-color:#f3f6f8;
+$nav-font-color-selected:#fff;
+$nav-selected-color:rgba(255,255,255,0.2);
+
+$tooltip-shadow:0 10px 20px 10px rgba(0,0,0,.1607843137254902);
+$card-shadow:3px 6px 14px 0 rgba(0,0,0,.1);
+$body-color:#edf1f7;
+
+
+//FONT-SIZE
+
+$base:16px;
+
+$nav-text:16px; //FIXED!
+
+$menu-title:14px;//FIXED!
+$menu-link:.9375rem;//15px;
+
+$main-title:1.01rem;//16.16px;
+$main-title-data:.75rem;//12px; 
+
+$section-title:19px;//FIXED!
+
+$card-title:.9rem;//14.4px; 
+$card-data-number-big:1.4rem;//22.4px; 
+$card-data-number-small:1.1rem;//17.6px; 
+$card-data-text:.75rem;//12px; 
+$card-data-text-definitions:.8rem;//12.8px;
+
+$filter-text:.9375rem;//15px;
+$filter-tile:14px; //FIXED!
+$notice-text:0.7rem;//11.2px;
+
+$table-text:14px; //FIXED!
+
+$link-card-title:1rem;//16px;
+$link-card-text:.875rem;//14px;
+
+
+
+   
+//LIGHT
+    --card-divider-color: #d8d8d9;
+
+    --action-link: #308BF6;
+    --btn-bg-color: #D5E0F4;
+    --btn-border-color: #C3CACF;
+    --tree-grid-header-background-color: #e6f1f3;
+
+
+    //dark
+
+
+
+--action-link: #9ee4ff;
+--btn-bg-color: #495b7b;
+--btn-border-color: #8394a0;
+--tree-grid-header-background-color: #2a3b47;

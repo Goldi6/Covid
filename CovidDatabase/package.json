@@ -1,0 +1,20 @@
+{
+  "name": "coviddatabase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "env-cmd -f ./config/dev.env node ./Database/index.js",
+    "update": "env-cmd -f ./config/dev.env node ./update/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  },
+  "dependencies": {
+    "covid_db_module": "file:../Modules/covid_db_module",
+    "mssql": "^10.0.1"
+  }
+}
