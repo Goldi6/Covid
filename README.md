@@ -1,4 +1,4 @@
-# Covid Project
+# Covid Project assignment
 
 - This Covid website clone uses 2 databases to create combined objects for the React app.
 
